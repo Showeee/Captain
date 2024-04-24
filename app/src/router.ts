@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 import Home from './pages/Home.vue';
 import Captain from './pages/Captain.vue';
@@ -6,7 +6,7 @@ import CaptainList from './pages/CaptainList.vue';
 import CaptainSummary from './pages/CaptainSummary.vue';
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
