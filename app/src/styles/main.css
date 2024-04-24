@@ -1,0 +1,81 @@
+:root {
+  --font-family-base: apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  --font-family-mono: 'JetBrainsMono', 'Fira Code Regular', 'Consolas', source-code-pro, Menlo, Monaco,
+    'Courier New', monospace;
+
+  --text-light-1: #2c3e50;
+  --text-light-2: #476582;
+  --text-light-3: #90a4b7;
+
+  --c-brand: #3273dc;
+  --c-brand-active: #3273dc;
+}
+
+html {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-light-1);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-brand);
+}
+
+/* Selection */
+::-webkit-selection {
+  background-color: #cce2ff;
+}
+::-moz-selection {
+  background-color: #cce2ff;
+}
+::selection {
+  background-color: #cce2ff;
+}
+input::-webkit-selection,
+textarea::-webkit-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+input::-moz-selection,
+textarea::-moz-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+input::selection,
+textarea::selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* Scrollbar */
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+}
+body ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+body ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  transition: color 0.2s ease;
+}
+body ::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.15);
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 135, 139, 0.8);
+}
