@@ -34,7 +34,7 @@ export default defineConfig({
       data: path.join(__dirname, '../data'),
       roomid,
       ruid,
-      gift: { name: '毛线毛裤' }
+      gift: { name: '猫耳朵' }
     })
   ],
   build: {
