@@ -30,7 +30,7 @@ watch(username, (username) => {
 
 let timestamp: number;
 let fireworks: Fireworks | undefined = undefined;
-const roll = () => {
+const roll = (count: number) => {
   if (timestamp && new Date().getTime() - timestamp < 3000) {
     return;
   }
@@ -40,7 +40,7 @@ const roll = () => {
   if (logs.value.length > 0 && logs.value[logs.value.length - 1].username === username.value) {
     reset();
   }
-  for (let i = 0; i < 10 && restUsers.value.length > 0; i++) {
+  for (let i = 0; i < number && restUsers.value.length > 0; i++) {
     const rd = random.uniformInt(0, restUsers.value.length - 1);
     const id = rd();
     const user = restUsers.value[id];
@@ -92,7 +92,10 @@ const tenP = computed(() => {
         <h3>奖品</h3>
         <h3>{{ gift.name }}</h3>
         <div mt="4">
-          <div class="button !border-0" @click="roll">
+          <div class="button !border-0" @click="roll(1)">
+            <a>单抽</a>
+          </div>
+          <div class="button !border-0" @click="roll(10)">
             <a>十连</a>
           </div>
         </div>
